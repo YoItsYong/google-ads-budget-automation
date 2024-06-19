@@ -14,7 +14,7 @@ To do this, data is passed from Google Ads, to Google Sheets, and is then re-upl
 
 The diagram below outlines the basic pipeline for how data is extracted, processed, and loaded back to the source.
 
-![Diagram of how data is passed between Google Ads and Google Sheets, using Javascript and SQL.] (/images/budget_pacing_diagram.png)
+![!\[Diagram of how data is passed between Google Ads and Google Sheets, using Javascript and SQL.\] (/images/budget_pacing_diagram.png)](https://raw.githubusercontent.com/YoItsYong/google-ads-budget-automation/master/images/budget_pacing_diagram.png)
 
 ### 1. Extracting Data from Google Ads
 The first step involves pulling data from Google Ads and moving it to Google Sheets. To do this, `getData.js` runs every day to pull performance data for each of the active campaigns across each campaign type.
