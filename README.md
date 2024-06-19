@@ -14,7 +14,7 @@ To do this, data is passed from Google Ads, to Google Sheets, and is then re-upl
 
 The diagram below outlines the basic pipeline for how data is extracted, processed, and loaded back to the source.
 
-insert diagram
+![Diagram of how data is passed between Google Ads and Google Sheets, using Javascript and SQL.] (/images/budget_pacing_diagram.png)
 
 ### 1. Extracting Data from Google Ads
 The first step involves pulling data from Google Ads and moving it to Google Sheets. To do this, `getData.js` runs every day to pull performance data for each of the active campaigns across each campaign type.
@@ -22,7 +22,7 @@ The first step involves pulling data from Google Ads and moving it to Google She
 ### 2. Processing Data in Google Sheets
 Next, we analyze the data in Google Sheets. Google makes it easy to inject Javascript to simplify a lot of this analysis.
 
-Data is dumped into one sheet and then Google Sheets' built-in `=QUERY` formula is used to select and filter for the desiered columns. An example of this can be found in `queryData.sql`.
+Data is dumped into one sheet and then Google Sheets' built-in `=QUERY` formula function is used to select and filter for the desiered columns. An example of this can be found in `queryData.sql`.
 
 The `evalData.js` code looks at the current daily spend (how much each campaign is spending)and the month-to-date spend and compares it to the target monthly budget.
 
